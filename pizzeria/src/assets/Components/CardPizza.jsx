@@ -1,0 +1,22 @@
+const CardPizza = ({ name, price, ingredients, img }) => {
+  return (
+    <div className="card h-100" style={{ width: '18rem' }}>
+      <img src={img} className="card-img-top" alt={name} />
+      <div className="card-body">
+        <h5 className="card-title text-center">Pizza {name}</h5>
+      </div>
+      <ul className="list-group list-group-flush text-center">
+        <li className="list-group-item text-muted">Ingredientes:</li>
+        <li className="list-group-item small">🍕 {ingredients.join(", ")}</li>
+      </ul>
+      <div className="card-body text-center">
+        <h4>${price}</h4>
+        <div className="d-flex justify-content-around">
+          <button className="btn btn-light border">Ver Más 👀</button>
+          <button className="btn btn-dark">Añadir 🛒</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default CardPizza;
